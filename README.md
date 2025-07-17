@@ -11,7 +11,7 @@ The project introduces a public high-fidelity dataset for blended wing body (BWB
 
 ## 🚀 Highlights
 
-- **999 BWB geometries** × \~9 flight cases → **8,830 high-fidelity simulations**
+- **999 BWB geometries** × \~10 flight cases → **8,830 high-fidelity simulations**
 - Surface-level CFD quantities: **Cp, Cfx, Cfz** with corresponding point coordinates and normals
 - **PointNet**-based encoder to recover geometric design parameters from a sampled surface
 - **FiLM**-modulated neural field for predicting pointwise aerodynamic coefficients
