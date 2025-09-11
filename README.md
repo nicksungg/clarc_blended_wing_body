@@ -8,6 +8,7 @@ This repository contains the codebase used in the ASME IDETC 2025 paper:
 The project introduces a public high-fidelity dataset for blended wing body (BWB) aircraft, as well as a two-stage surrogate model combining PointNet and FiLM-based neural networks to predict pointwise aerodynamic coefficients. 
 
 The dataset is publicly available at: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VJT9EP
+
 Also, check out our paper on Arxiv: https://arxiv.org/abs/2509.07209
 
 
