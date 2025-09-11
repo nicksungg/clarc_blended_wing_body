@@ -5,7 +5,12 @@ This repository contains the codebase used in the ASME IDETC 2025 paper:
 **"BlendedNet: A Blended Wing Body Aircraft Dataset and Surrogate Model for Aerodynamic Predictions"**\
 *Presented at ASME IDETC/CIE 2025, Anaheim, CA*
 
-The project introduces a public high-fidelity dataset for blended wing body (BWB) aircraft, as well as a two-stage surrogate model combining PointNet and FiLM-based neural networks to predict pointwise aerodynamic coefficients.
+The project introduces a public high-fidelity dataset for blended wing body (BWB) aircraft, as well as a two-stage surrogate model combining PointNet and FiLM-based neural networks to predict pointwise aerodynamic coefficients. 
+
+The dataset is publicly available at: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VJT9EP
+Also, check out our paper on Arxiv: https://arxiv.org/abs/2509.07209
+
+
 
 ---
 
@@ -26,14 +31,9 @@ The project introduces a public high-fidelity dataset for blended wing body (BWB
 ├── models/
 │   ├── film_model_v1.py                # Early FiLM model (ReLU, no residuals)
 │   └── film_model_v2.py                # Final FiLM model (SIREN-style with sine + residuals)
-├── data/
-│   └── dataset_v2.py                   # Dataset class using HDF5 and CSV files
-├── training/
-│   └── train.py                        # Full training loop with logging and validation
-├── notebooks/
-│   ├── aero_nerf_train_model_v2.ipynb  # Training pipeline (PointNet + FiLM)
-│   ├── aero_nerf_evaluate_r2plot.ipynb # R² plotting and evaluation
-│   └── aero_nerf_evaluate_model_v5_normal_predparam_vtk.ipynb  # VTK export for visualization
+├── dataset.py                          # Dataloading
+│   train.ipynb  # Training pipeline (PointNet + FiLM)
+│   test.ipynb # R² plotting and evaluation
 ├── requirements.txt
 └── README.md
 ```
@@ -93,19 +93,14 @@ pip install -r requirements.txt
 ### Train the Model
 
 ```bash
-# Inside notebooks/aero_nerf_train_model_v2.ipynb
-# or via script:
-python training/train.py
+# Inside train.ipynb
 ```
 
 ### Evaluate
 
 ```bash
-# Generate R2 plots
-notebooks/aero_nerf_evaluate_r2plot.ipynb
+# test.ipynb
 
-# Generate VTK predictions
-notebooks/aero_nerf_evaluate_model_v5_normal_predparam_vtk.ipynb
 ```
 
 ---
