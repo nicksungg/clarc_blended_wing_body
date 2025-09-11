@@ -34,7 +34,7 @@ Also, check out our paper on Arxiv: https://arxiv.org/abs/2509.07209
 │   └── film_model_v2.py                # Final FiLM model (SIREN-style with sine + residuals)
 ├── dataset.py                          # Dataloading
 │   train.ipynb  # Training pipeline (PointNet + FiLM)
-│   test.ipynb # R² plotting and evaluation
+│   test.ipynb # Evaluation
 ├── requirements.txt
 └── README.md
 ```
